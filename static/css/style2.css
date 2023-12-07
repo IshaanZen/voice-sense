@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Hedvig+Letters+Serif:opsz@12..24&family=Merriweather+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("/static/Images/5183000.jpg");
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Merriweather Sans', sans-serif;
+    background-size: cover;
+}
+
+li,a{ 
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.nav_link li {
+    display: inline-block;
+    padding: 20px;
+    font-style: italic;
+    
+}
+.nav_link li a{
+    position: relative;
+    padding: 0 10px;
+    
+}
+
+.nav_link li a::after{
+    content: "";
+    position: absolute ;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: red;
+    width: 0%;
+    transition: 0.3s ease-in-out;
+}
+
+.nav_link li a:hover::after {
+    width: 100%;
+    
+}
+
+
+.container{
+    width: 90%;
+    align-items: center;
+    text-align: center;
+    /* background-color: antiquewhite; */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container h1{
+    font-size: 3em;
+    text-decoration: underline;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.card-temp{
+    display: flex;
+    gap: 1em;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.card{
+    width: 200px;
+    height: 250px;
+    background-color: rgb(50, 204, 209);
+    padding: 20px;
+    border-radius: 15%;
+    
+}
+
+.card-img-top{
+    width: 90px;
+    height: 90px;
+
+}
+
+.card-body{
+    padding: 10px;
+}
+
+.card-body p{
+    padding: 10px;
+    font-size: 1.2em;
+}

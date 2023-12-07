@@ -1,0 +1,349 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Hedvig+Letters+Serif:opsz@12..24&family=Merriweather+Sans&display=swap');
+
+
+
+  /* FONT USED 
+  1- font-family: 'Hedvig Letters Serif', serif;
+  2 - font-family: 'Merriweather Sans', sans-serif;
+  3 - font-family: 'Abril Fatface', serif;
+   */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: no-repeat center url('/static/Images/5183000.jpg');
+    background-size: cover;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.cursor-follow{
+    transition:all cubic-bezier(0.3 , 1 , 0.2 ,1) 0.3s ; /*or can use - transition: all 0.3s ease-in */
+    width: 10px;
+    height: 10px;
+    background-color: rgb(4, 4, 4);
+    position: absolute;
+    z-index: 99999;
+    border-radius:50%;
+}
+
+li,a{ 
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.nav_link li {
+    display: inline-block;
+    padding: 20px;
+    font-style: italic;
+    
+}
+.nav_link li a{
+    position: relative;
+    padding: 0 10px;
+    
+}
+
+.nav_link li a::after{
+    content: "";
+    position: absolute ;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: red;
+    width: 0%;
+    transition: 0.3s ease-in-out;
+}
+
+.nav_link li a:hover::after {
+    width: 100%;
+    
+}
+
+/* #navbar ul li a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 10%;
+    background-color: red;
+    display: block;
+
+} */
+
+/* -----------------------------------------------------------MAIN CONTAINERS ---------------------------------------------------------------------- */
+.img1{
+    height: 30vh;
+    width: 15vw;
+    position: absolute;
+    top: 10%;
+    left: 18%;
+    z-index: 9999;
+    border-radius: 20px;
+}
+
+.img2{
+    height: 40vh;
+    width: 15vw;
+    position: absolute;
+    object-fit: cover;
+    top: 30%;
+    left: 30%;
+    border-radius: 20px;
+    z-index: 2;
+}
+.img3{
+    height: 32vh;
+    width: 14vw;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.m-img{
+
+    box-shadow: 10px 10px 30px black;
+}
+
+.left-Heading{
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    width: 50%;
+    margin-left: 10%;
+    font-family: "Abril Fatface", cursive;
+    letter-spacing: 0.3rem;
+    font-size: 2.5em;
+    cursor: pointer;
+    /* background-color: aqua; */
+}
+
+.left-Heading::after{
+    content: "";
+    position: absolute;
+    left: 4%;
+    bottom: 45%;
+    height: 3px;
+    background-color: red;
+    width: 0%;
+    transition: 0.3s ease-in-out;
+}
+
+.left-Heading:hover::after {
+    width: 23%;
+    
+}
+
+.left-cont{
+    width: 50%;
+    float: left;
+}
+/* -----------------------------------------------------------RIGHT CONTAINER ---------------------------------------------------------------------- */
+
+.right-cont{
+    float: right;
+    width: 50%;
+    /* background-color: red;*/
+}
+
+
+.flip-card {
+    background-color: transparent;
+    width: 700px;
+    height: 300px;
+    margin: 10px auto;
+    perspective: 1000px;
+    border-radius: 15px;
+    
+    
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 10px 10px 30px currentColor;
+    border-radius: 15px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.flip-card-front {
+    /* background-color: whitesmoke; */
+    color: black;
+}
+
+.flip-card-front h1 {
+    margin: 50px 10px;
+    margin-bottom: 50px;
+    vertical-align: middle;
+    font-weight:500;
+    font-family: 'Abril Fatface', cursive;
+}
+
+
+.para1{
+    margin: 50px 10px;
+    /* margin-top: 20px; */
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.flip-card-back {
+    /* background-color: #9c72b4; */
+    color: black;
+    padding-top: 20px;
+    transform: rotateY(180deg);
+}
+.flip-card-back h2 {
+    font-style: italic;
+    margin: 50px 50px;
+    margin-bottom: 50px;
+    vertical-align: middle;
+    font-size: 1.1em;
+    font-weight:500;
+    /* font-family: 'Abril Fatface', italics; */
+    padding: 10px 10px 0 10px;
+    text-align: justify; 
+}
+
+.guideline{
+    
+    padding: 10px 10px 0 10px;
+    text-align: justify;
+    width: 70%;
+    margin: 50px auto;
+    margin-bottom: 0;
+}
+
+.guideline>h2{
+    font-size: 2em;
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    padding-bottom: 20px;
+    text-decoration:underline;
+}
+
+.guideline>p{
+    padding-bottom: 0;
+    padding: 10px;
+    font-size: 1.2em;
+    font-style: italic;
+
+}
+
+
+/* .voice-box{
+    background-color: rgb(240, 205, 231);
+    background-color: rgb(255, 240, 254);
+    width: 500px;
+    height: 175px;
+    border: 3px solid white;
+    box-shadow: 5px 10px 30px #e4bacaa1; 
+    border-radius: 15px;
+    padding: 50px;
+    text-align:center;
+    margin: 50px auto;
+    margin-bottom: 0px;
+}
+
+.inner{
+    
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.inner>p{
+    font-family: 'Abril Fatface', italics;
+    font-size: 25px;
+    font-weight:200;
+    margin-top: 20px;
+} */
+
+/* .start-btn {
+    width: 30%;
+    height: 60px;
+    background: rgb(238, 138, 221);
+    border: 3px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(207, 188, 212);
+    font-size: 0.8em;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    margin-top: 10px;
+} 
+.start-btn:hover {
+    background: rgb(213, 86, 192);
+    box-shadow: none;
+    color: white;
+    height: 70px;
+    width: 35%;
+
+}  */
+
+.start-analysis{
+    width: 35%;
+    height: 100%;
+    background:transparent;
+    border: 3px solid #fff;
+    border-radius: 6px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px auto;
+    margin-top: 5%;
+    padding: 20px;
+    text-align: center;
+}
+
+.start-text{
+    font-family: 'Hedvig Letters Serif', serif;
+    padding: 30px;
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.start-analysis:hover{
+    width: 38%;
+    color: white;
+    font-size: 1.1em;
+}
+
