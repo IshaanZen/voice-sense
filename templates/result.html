@@ -9,11 +9,12 @@
 </head>
 <body>
 
-    <header>
+    <header id="nav">
+        <a class="logo-a" href="/"><img class="logo" src="/static/images/voice-sense.png" alt="Logo"> Voice Sense </a>
         <nav class="nav_link">
             <ul>
-                <li> <a href="/" >HOME</a></li>
-                <li> <a href="#" >ABOUT US</a></li>
+                <li> <a href="/" class=" active" >HOME</a></li>
+                <li> <a href="/about-us" >ABOUT US</a></li>
             </ul>
         </nav>
     </header>
@@ -24,10 +25,9 @@
         <div class="card-temp">
 
             <div class="card">
-                <img src="/static/Images/Emojis/{{emotion}}.png" class="card-img-top" alt="...">
+                <img src="/static/Images/Emojis/{{emotion}}.png" class="card-img-top pop-out-emoji" alt="...">
                 <div class="card-body">
                     <p class="card-text">{{emotion}}</p>
-                    <p class="test-perc">{{emotion_percentage}}%</p>
                 </div>
             </div>
             

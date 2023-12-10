@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.homePage, name='home'),
     path('result/', views.resultPage, name='result'),
     path('save-audio/', views.save_audio, name='saveaudio'),
+    path('about-us/', views.aboutUsPage, name='aboutus'),
 ]

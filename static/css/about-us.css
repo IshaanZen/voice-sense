@@ -1,0 +1,205 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Hedvig+Letters+Serif:opsz@12..24&family=Merriweather+Sans&display=swap');
+
+
+
+  /* FONT USED 
+  1- font-family: 'Hedvig Letters Serif', serif;
+  2 - font-family: 'Merriweather Sans', sans-serif;
+  3 - font-family: 'Abril Fatface', serif;
+   */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: no-repeat center fixed url('/static/Images/5183000.jpg');
+    background-size: cover;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.cursor-follow{
+    transition:all cubic-bezier(0.3 , 1 , 0.2 ,1) 0.3s ; /*or can use - transition: all 0.3s ease-in */
+    width: 10px;
+    height: 10px;
+    background-color: rgb(4, 4, 4);
+    position: absolute;
+    z-index: 99999;
+    border-radius:50%;
+}
+
+li,a{ 
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+    /* background-color: black; */
+}
+
+.logo-a{
+    margin-left: 90px;
+    display: flex;
+    align-items: center;
+    font-family: 'Hedvig Letters Serif', serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    transition: 0.3s ease-in-out;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+   
+}
+
+.logo-a:hover{
+    color: rgb(255, 0, 0);
+}
+
+.nav_link{
+margin-right: 90px;
+
+}
+
+.nav_link li {
+    display: inline-block;
+    padding: 20px;
+    font-style: italic;
+    
+}
+.nav_link li a{
+    position: relative;
+    padding: 0 10px;
+    
+}
+
+.nav_link li a::after{
+    content: "";
+    position: absolute ;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: red;
+    width: 0%;
+    transition: 0.3s ease-in-out;
+}
+
+.nav_link li a:hover::after {
+    width: 100%;
+    
+}
+
+/* #navbar ul li a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 10%;
+    background-color: red;
+    display: block;
+
+} */
+
+.active{
+    color: red;
+    
+}
+
+
+/* -------------------------------------------------------------------MAIN CONTENT */
+
+.about-div{
+    width: 60%;
+    background-color: rgba(255, 230, 230, 0.458);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.438);
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 5%;
+    
+}
+
+.ab-site h1{
+    
+    font-size: 3em;
+    margin: 0 20px;
+    /* background-color: rebeccapurple; */
+    padding: 20px;
+    font-family: 'Abril Fatface', cursive;
+    
+}
+
+.ab-site p{
+
+    padding: 20px;
+    font-size: 1.1em;
+    letter-spacing: 1.2px;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+
+.ab-site{
+    
+    text-align: center;
+    padding: 30px;
+    border-bottom: 5px solid black;
+}
+
+
+.Team h1{
+    font-size: 3em;
+    margin: 50px;
+    text-align: center;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+.Team img {
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.Team p {
+    /* text-align: center; */
+    margin: 2px;
+    padding: 20px;
+    font-size: 1.1em;
+    letter-spacing: 1.2px;
+    line-height: 1.5em;
+}
+
+.mem-1 , .mem-3{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: 100%;
+    /* background-color: red; */
+}
+.mem-2,.mem-4{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse;
+    /* background-color: aqua; */
+}
+/* .mem-4{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row-reverse;
+    background-color: aqua;
+
+} */
+
